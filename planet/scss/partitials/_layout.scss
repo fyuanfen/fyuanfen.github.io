@@ -1,0 +1,186 @@
+@import "variable";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: $color1;
+  min-width: 1280px;
+  font-family: "Microsoft YaHei", yaHei;
+}
+
+.planet {
+  @extend %align-middle;
+  width: 250px;
+  height: 250px;
+  background-color: $color2;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+@for $i from 1 through 3 {
+  .hole-#{$i} {
+    width: $i * 20px;
+    height: $i * 20px;
+    border-radius: 50%;
+    background-color: $color3;
+    position: relative;
+    top: $i * 40px;
+    left: $i * 40px + 10px;
+  }
+}
+
+#layout {
+  position: relative;
+  margin: 0 auto;
+  width: 800px;
+  height: 680px;
+}
+
+@for $i from 1 through 4 {
+  .orbite#{$i} {
+    @extend %align-middle;
+    width: $basic + $i * 100px;
+    height: $basic + $i * 100px;
+    & .orbite-#{$i} {
+      width: 100%;
+      height: 100%;
+      border: 2px solid $color9;
+      border-radius: 50%;
+    }
+  }
+  .craft-model-#{$i} {
+    @extend %align-middle;
+    display: none;
+    width: 360px + ($i - 1) * 100px;
+    height: 40px;
+    & .craft-inner {
+      float: right;
+      position: relative;
+      width: 20px;
+      height: 40px;
+      border-radius: 10px;
+      background-color: $color4;
+      text-align: center;
+      overflow: hidden;
+      & span {
+        display: block;
+        position: relative;
+        line-height: 40px;
+        font-size: .75rem;
+        z-index: 9;
+        color: $color1;
+        transform: rotate(-90deg);
+      }
+      & .energy {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        background-color: $color10;
+        z-index: 0;
+      }
+    }
+    /*left: $basic + $i * 100px - 10px;*/
+  }
+}
+
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  animation: rotating 10s linear infinite;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  & [class ^= planet] {
+    position: absolute;
+    width: $planet-size;
+    height: $planet-size;
+    border-radius: 50%;
+  }
+  & .hole-4 {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: $color11;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+  }
+  & .hole-5 {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: $color12;
+    border-radius: 50%;
+    top: 10px;
+    left: -5px;
+  }
+  .planet-1 {
+    top: 450px;
+    left: 300px;
+    background-color: $color4;
+    overflow: hidden;
+  }
+  .planet-2 {
+    width: $planet-size - 10px;
+    height: $planet-size - 10px;
+    top: 150px;
+    right: 350px;
+    background-color: $color13;
+    overflow: hidden;
+    & .hole-4 {
+      background-color: $color14;
+    }
+    & .hole-5 {
+      background-color: $color15;
+    }
+  }
+  .planet-3 {
+    top: 450px;
+    right: 300px;
+    background-color: $color16;
+    overflow: hidden;
+    & .hole-4 {
+      background-color: $color17;
+    }
+    & .hole-5 {
+      background-color: $color17;
+    }
+  }
+
+  .planet-4 {
+    top: 50px;
+    left: 300px;
+    background-color: $color16;
+    overflow: hidden;
+    & .hole-4 {
+      background-color: $color17;
+    }
+    & .hole-5 {
+      background-color: $color17;
+    }
+  }
+
+}

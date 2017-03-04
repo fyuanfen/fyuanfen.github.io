@@ -1,0 +1,31 @@
+$color1: #02071d;
+$color2: #ec5d4a;
+$color3: #c83b38;
+$color4: #d9e6cd;
+$color5: #32a39d;
+$color6: #3b3f58;
+$color7: #08687e;
+$color8: #d1e8d6;
+$color9: #3e4059;
+$color10: #2fa06c;
+$color11: #cbd1c6;
+$color12: #999b8d;
+$color13: #11a4c6;
+$color14: #1068a8;
+$color15: #84bde7;
+$color16: #f5a83e;
+$color17: #e0862e;
+
+$svg: 800px;
+$basic: 250px;
+
+$planet-size: 40px;
+
+%align-middle {
+  position: absolute;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}

@@ -1,0 +1,19 @@
+@import "variable";
+.console {
+  flex: 3;
+  margin: 0 20px;
+  /*position: absolute;
+  left: 0;
+  bottom: 0;*/
+  bottom: 0;
+  width: 300px;
+  height: 150px;
+  padding: 0 10px;
+  line-height: 16px;
+  border-left: 2px dotted $color6;
+  color: $color5;
+  font-size: .75rem;
+  & .success {
+    color: $color4;
+  }
+}

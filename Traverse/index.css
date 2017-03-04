@@ -1,0 +1,35 @@
+div{
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    padding:15px;
+    margin:10px;
+    background-color: #ffffff;
+
+}
+.container,p{
+    width:750px;
+    margin: 30px auto;
+}
+p{
+    display: flex;
+    justify-content: space-around;
+}
+p button{
+    width:80px;
+    height:40px;
+    font-size: 14px;
+    background-color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid black;
+    outline:none;
+}
+p button:hover{
+    color:#fff;
+    background-color: #009A61;
+
+}
+div.active{
+    background-color: #009A61;
+}

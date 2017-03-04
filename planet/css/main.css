@@ -1,0 +1,394 @@
+.planet, .orbite1, .craft-model-1, .orbite2, .craft-model-2, .orbite3, .craft-model-3, .orbite4, .craft-model-4 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto; }
+
+.planet, .orbite1, .craft-model-1, .orbite2, .craft-model-2, .orbite3, .craft-model-3, .orbite4, .craft-model-4 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #02071d;
+  min-width: 1280px;
+  font-family: "Microsoft YaHei", yaHei; }
+
+.planet {
+  width: 250px;
+  height: 250px;
+  background-color: #ec5d4a;
+  border-radius: 50%;
+  overflow: hidden; }
+
+.hole-1 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #c83b38;
+  position: relative;
+  top: 40px;
+  left: 50px; }
+
+.hole-2 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #c83b38;
+  position: relative;
+  top: 80px;
+  left: 90px; }
+
+.hole-3 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #c83b38;
+  position: relative;
+  top: 120px;
+  left: 130px; }
+
+#layout {
+  position: relative;
+  margin: 0 auto;
+  width: 800px;
+  height: 680px; }
+
+.orbite1 {
+  width: 350px;
+  height: 350px; }
+  .orbite1 .orbite-1 {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #3e4059;
+    border-radius: 50%; }
+
+.craft-model-1 {
+  display: none;
+  width: 360px;
+  height: 40px;
+  /*left: $basic + $i * 100px - 10px;*/ }
+  .craft-model-1 .craft-inner {
+    float: right;
+    position: relative;
+    width: 20px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #d9e6cd;
+    text-align: center;
+    overflow: hidden; }
+    .craft-model-1 .craft-inner span {
+      display: block;
+      position: relative;
+      line-height: 40px;
+      font-size: .75rem;
+      z-index: 9;
+      color: #02071d;
+      transform: rotate(-90deg); }
+    .craft-model-1 .craft-inner .energy {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      background-color: #2fa06c;
+      z-index: 0; }
+
+.orbite2 {
+  width: 450px;
+  height: 450px; }
+  .orbite2 .orbite-2 {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #3e4059;
+    border-radius: 50%; }
+
+.craft-model-2 {
+  display: none;
+  width: 460px;
+  height: 40px;
+  /*left: $basic + $i * 100px - 10px;*/ }
+  .craft-model-2 .craft-inner {
+    float: right;
+    position: relative;
+    width: 20px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #d9e6cd;
+    text-align: center;
+    overflow: hidden; }
+    .craft-model-2 .craft-inner span {
+      display: block;
+      position: relative;
+      line-height: 40px;
+      font-size: .75rem;
+      z-index: 9;
+      color: #02071d;
+      transform: rotate(-90deg); }
+    .craft-model-2 .craft-inner .energy {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      background-color: #2fa06c;
+      z-index: 0; }
+
+.orbite3 {
+  width: 550px;
+  height: 550px; }
+  .orbite3 .orbite-3 {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #3e4059;
+    border-radius: 50%; }
+
+.craft-model-3 {
+  display: none;
+  width: 560px;
+  height: 40px;
+  /*left: $basic + $i * 100px - 10px;*/ }
+  .craft-model-3 .craft-inner {
+    float: right;
+    position: relative;
+    width: 20px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #d9e6cd;
+    text-align: center;
+    overflow: hidden; }
+    .craft-model-3 .craft-inner span {
+      display: block;
+      position: relative;
+      line-height: 40px;
+      font-size: .75rem;
+      z-index: 9;
+      color: #02071d;
+      transform: rotate(-90deg); }
+    .craft-model-3 .craft-inner .energy {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      background-color: #2fa06c;
+      z-index: 0; }
+
+.orbite4 {
+  width: 650px;
+  height: 650px; }
+  .orbite4 .orbite-4 {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #3e4059;
+    border-radius: 50%; }
+
+.craft-model-4 {
+  display: none;
+  width: 660px;
+  height: 40px;
+  /*left: $basic + $i * 100px - 10px;*/ }
+  .craft-model-4 .craft-inner {
+    float: right;
+    position: relative;
+    width: 20px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #d9e6cd;
+    text-align: center;
+    overflow: hidden; }
+    .craft-model-4 .craft-inner span {
+      display: block;
+      position: relative;
+      line-height: 40px;
+      font-size: .75rem;
+      z-index: 9;
+      color: #02071d;
+      transform: rotate(-90deg); }
+    .craft-model-4 .craft-inner .energy {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      background-color: #2fa06c;
+      z-index: 0; }
+
+.hidden {
+  display: none; }
+
+.visible {
+  display: block; }
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+.rotating {
+  animation: rotating 10s linear infinite; }
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+  .background [class^=planet] {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; }
+  .background .hole-4 {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #cbd1c6;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px; }
+  .background .hole-5 {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #999b8d;
+    border-radius: 50%;
+    top: 10px;
+    left: -5px; }
+  .background .planet-1 {
+    top: 450px;
+    left: 300px;
+    background-color: #d9e6cd;
+    overflow: hidden; }
+  .background .planet-2 {
+    width: 30px;
+    height: 30px;
+    top: 150px;
+    right: 350px;
+    background-color: #11a4c6;
+    overflow: hidden; }
+    .background .planet-2 .hole-4 {
+      background-color: #1068a8; }
+    .background .planet-2 .hole-5 {
+      background-color: #84bde7; }
+  .background .planet-3 {
+    top: 450px;
+    right: 300px;
+    background-color: #f5a83e;
+    overflow: hidden; }
+    .background .planet-3 .hole-4 {
+      background-color: #e0862e; }
+    .background .planet-3 .hole-5 {
+      background-color: #e0862e; }
+  .background .planet-4 {
+    top: 50px;
+    left: 300px;
+    background-color: #f5a83e;
+    overflow: hidden; }
+    .background .planet-4 .hole-4 {
+      background-color: #e0862e; }
+    .background .planet-4 .hole-5 {
+      background-color: #e0862e; }
+
+.planet, .orbite1, .craft-model-1, .orbite2, .craft-model-2, .orbite3, .craft-model-3, .orbite4, .craft-model-4 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto; }
+
+.control {
+  flex: 7;
+  color: #d9e6cd; }
+  .control .craft-control {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    width: 70px;
+    margin: 40px 40px;
+    cursor: pointer; }
+    .control .craft-control:last-child {
+      font-size: 2rem; }
+    .control .craft-control span {
+      display: inline-block;
+      width: 60px;
+      line-height: 60px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: #32a39d; }
+    .control .craft-control.selected [class*=operate] {
+      display: inline-block; }
+    .control .craft-control.hidden {
+      display: none; }
+  .control [class*=operate] {
+    display: none;
+    position: absolute;
+    list-style: none; }
+    .control [class*=operate] button {
+      width: 25px;
+      height: 25px;
+      background-color: #d1e8d6;
+      color: #32a39d;
+      border: none;
+      font-size: .75rem;
+      border-radius: 50%;
+      cursor: pointer;
+      outline: none; }
+    .control [class*=operate] [class*=forbid] {
+      opacity: .5; }
+  .control .operate-1 {
+    left: 20px;
+    top: -20px; }
+  .control .operate-2 {
+    left: 40px;
+    top: 15px; }
+  .control .operate-3 {
+    left: 20px;
+    top: 50px; }
+  .control .operates {
+    display: inline-block; }
+
+.control-wrapper {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 150px;
+  border: 2px dotted #3b3f58;
+  border-radius: 10px; }
+
+.planet, .orbite1, .craft-model-1, .orbite2, .craft-model-2, .orbite3, .craft-model-3, .orbite4, .craft-model-4 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto; }
+
+.console {
+  flex: 3;
+  margin: 0 20px;
+  /*position: absolute;
+  left: 0;
+  bottom: 0;*/
+  bottom: 0;
+  width: 300px;
+  height: 150px;
+  padding: 0 10px;
+  line-height: 16px;
+  border-left: 2px dotted #3b3f58;
+  color: #32a39d;
+  font-size: .75rem; }
+  .console .success {
+    color: #d9e6cd; }
+
+/*# sourceMappingURL=main.css.map */

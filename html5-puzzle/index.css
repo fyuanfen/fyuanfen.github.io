@@ -1,0 +1,919 @@
+@charset "UTF-8";
+article, aside, blockquote, body, button, code, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, input, legend, li, menu, nav, ol, p, pre, section, td, textarea, th, ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+html {
+  overflow-scrolling: touch;
+  background-color: #fff;
+  margin: 0 auto;
+  height: 100%
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  line-height: 1.5;
+  font-size: .28rem;
+  color: #333;
+  -webkit-user-select: none;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+  height: 100%
+}
+
+a {
+  color: #333
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: 400
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+caption, th {
+  text-align: left
+}
+
+fieldset, img {
+  border: 0;
+  vertical-align: middle;
+  width: 100%
+}
+
+li {
+  list-style: none
+}
+
+ins {
+  text-decoration: none
+}
+
+del {
+  text-decoration: line-through
+}
+
+button, input, optgroup, option, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  outline: 0
+}
+
+button {
+  -webkit-appearance: none;
+  border: 0;
+  background: 0 0
+}
+
+a {
+  -webkit-touch-callout: none;
+  text-decoration: none
+}
+
+:focus {
+  outline: 0;
+  -webkit-tap-highlight-color: transparent
+}
+
+em, i {
+  font-style: normal
+}
+
+input, select, textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, '微软雅黑';
+  font-size: .32rem;
+  outline: 0;
+  color: #777;
+  border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent
+}
+
+textarea {
+  word-wrap: break-word;
+  resize: none
+}
+
+input[type=button], input[type=submit] {
+  cursor: pointer
+}
+
+input[placeholder] {
+  color: #555
+}
+
+input[type=text]:focus, select:focus, textarea:focus {
+  color: #222
+}
+
+input[type=text]::-ms-clear {
+  display: none
+}
+
+input[disabled=disabled] {
+  cursor: not-allowed
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0
+}
+
+html .hide {
+  display: none
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0
+}
+
+select::-ms-expand {
+  display: none
+}
+
+::-ms-check {
+  display: none
+}
+
+h1 {
+  font-size: .36rem;
+  font-weight: 700
+}
+
+.c666 {
+  color: #666
+}
+
+.c999 {
+  color: #999
+}
+
+.corange {
+  color: #F25824
+}
+
+.nowrap {
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+
+.ui-center {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center
+}
+
+.ui-pop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 101;
+  background: rgba(0, 0, 0, .8);
+  overflow: hidden;
+  overflow-y: auto;
+  overflow-scrolling: touch
+}
+
+.ui-pop-foot {
+  font-size: .34rem;
+  text-align: center;
+  line-height: .88rem;
+  display: -webkit-box;
+  display: flex
+}
+
+.ui-pop-foot a {
+  width: 100%;
+  -webkit-box-flex: 1;
+  flex: 1;
+  display: block
+}
+
+.ui-pop-l {
+  background: #fff;
+  padding: .88rem 0 0 0
+}
+
+.ui-pop-l .head {
+  background: rgba(255, 255, 255, .9)
+}
+
+.ui-pop-l .box-hd {
+  border: none
+}
+
+.ui-pop-l .box-hd:after {
+  background: 0 0
+}
+
+.m-login {
+  width: 5.4rem;
+  background: #F5F5F5;
+  border-radius: .12rem;
+  overflow: hidden
+}
+
+.m-login-hd {
+  padding: .2rem .3rem .1rem .3rem;
+  text-align: center
+}
+
+.m-login-hd h2 {
+  line-height: .6rem;
+  font-size: .34rem
+}
+
+.m-login-hd p {
+  font-size: .26rem;
+  color: #666
+}
+
+.m-login-bd {
+  padding: 0 .3rem;
+  padding-bottom: .24rem
+}
+
+.m-login-bd li {
+  margin-top: .12rem;
+  line-height: .8rem;
+  display: -webkit-box;
+  display: flex
+}
+
+.m-login-bd .label {
+  font-size: .32rem
+}
+
+.m-login-bd .flex-1 {
+  position: relative;
+  margin-left: .16rem;
+  background: #fff;
+  -webkit-box-flex: 1;
+  flex: 1;
+  overflow: hidden
+}
+
+.m-login-bd input {
+  width: 100%;
+  padding: 0 .2rem
+}
+
+.m-login-bd .code, .m-login-bd img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 1.6rem
+}
+
+.m-login-bd .code {
+  color: #F25824;
+  line-height: 1;
+  text-align: center;
+  font-size: .24rem
+}
+
+@-webkit-keyframes scale-all {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+  50% {
+    -webkit-transform: scale(.95);
+    transform: scale(.95)
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
+@keyframes scale-all {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+  50% {
+    -webkit-transform: scale(.95);
+    transform: scale(.95)
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
+@-webkit-keyframes rotate-all {
+  0% {
+    -webkit-transform: rotate(0) scale(.8);
+    transform: rotate(0) scale(.8)
+  }
+  100% {
+    -webkit-transform: rotate(720deg) scale(.8);
+    transform: rotate(720deg) scale(.8)
+  }
+}
+
+@keyframes rotate-all {
+  0% {
+    -webkit-transform: rotate(0) scale(.8);
+    transform: rotate(0) scale(.8)
+  }
+  100% {
+    -webkit-transform: rotate(720deg) scale(.8);
+    transform: rotate(720deg) scale(.8)
+  }
+}
+
+html {
+  background: #f7e1bd
+}
+
+.share {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  width: 2rem;
+  height: 2rem
+}
+
+.loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999999999;
+  background: #f7e1bd;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center
+}
+
+.rotating-plane {
+  background: url(http://hd.xf.fangdd.com/static/senlingame/img/loading.png) no-repeat;
+  background-size: 100% 100%;
+  width: .68rem;
+  height: .68rem;
+  -webkit-animation: rotate-all 1.2s linear 0s infinite;
+  animation: rotate-all 1.2s linear 0s infinite
+}
+
+.index-warp {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  min-height: 100%;
+  text-align: center;
+  background: url(http://hd.xf.fangdd.com/static/senlingame/img/game-1.png) no-repeat top center, url(http://hd.xf.fangdd.com/static/senlingame/img/game-2.png) no-repeat bottom center;
+  background-color: #f7e1bd;
+  background-size: 100% auto;
+  padding: 3.51rem 0 5.21rem 0
+}
+
+.index-warp h1 {
+  display: none
+}
+
+.index-warp h2 {
+  padding-top: .2rem;
+  line-height: .44rem;
+  font-size: .3rem;
+  color: #982505
+}
+
+.index-warp h2 strong {
+  color: #f56c00;
+  font-weight: 700
+}
+
+.index-warp .start-btn {
+  margin: .26rem 0 .4rem 0;
+  width: 4.3rem;
+  height: 1.06rem;
+  display: inline-block;
+  background: url(http://hd.xf.fangdd.com/static/senlingame/img/start-btn.png) no-repeat top center;
+  background-size: 100% 100%;
+  -webkit-animation: scale-all 1s ease-in-out 0s infinite;
+  animation: scale-all 1s ease-in-out 0s infinite
+}
+
+.index-warp-ft {
+  padding: 0 .4rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: .4rem
+}
+
+.index-warp-ft a {
+  display: inline-block;
+  background: #ff770d;
+  width: 1.9rem;
+  height: .74rem;
+  line-height: .74rem;
+  border: .05rem solid #d45000;
+  border-radius: .42rem;
+  font-size: .34rem;
+  color: #fff;
+  font-weight: 700
+}
+
+.index-warp-ft a:first-child {
+  float: left
+}
+
+.index-warp-ft a:last-child {
+  float: right
+}
+
+.ui-pop-warp {
+  width: 6.6rem;
+  background: #f7e1bd;
+  border-radius: .2rem;
+  overflow: hidden
+}
+
+.ui-pop-warp .ui-pop-hd {
+  position: relative;
+  text-align: center;
+  height: .88rem;
+  line-height: .88rem;
+  background: #ffca7a
+}
+
+.ui-pop-warp .ui-pop-bd {
+  padding: .3rem;
+  font-size: .32rem;
+  color: #982505
+}
+
+.ui-pop-warp .ui-pop-bd h2 {
+  font-weight: 700;
+  color: #ff770d
+}
+
+.ui-pop-warp .ui-pop-bd p {
+  padding: .05rem 0
+}
+
+.page1-tit, .page2-tit, .page3-tit, .rank-hd, .tit1, .tit2, .ui-pop-close {
+  /*background: url(http://hd.xf.fangdd.com/static/senlingame/img/type.png) no-repeat;*/
+  background-size: 3.94rem 6.72rem;
+  display: inline-block
+}
+
+.tit1 {
+  margin-top: .2rem;
+  width: 1.69rem;
+  height: .45rem;
+  background-position: 0 0
+}
+
+.tit2 {
+  margin-top: .2rem;
+  width: 1.69rem;
+  height: .45rem;
+  background-position: -1px -.5rem
+}
+
+.page1-tit, .page2-tit, .page3-tit {
+  margin-top: .5rem
+}
+
+.page1-tit {
+  width: 3.74rem;
+  height: 1.23rem;
+  background-position: 0 -1.13rem
+}
+
+.page2-tit {
+  width: 3.76rem;
+  height: 1.22rem;
+  background-position: 0 -2.54rem
+}
+
+.page3-tit {
+  width: 3.76rem;
+  height: 1.23rem;
+  background-position: 0 -3.93rem
+}
+
+.ui-pop-close {
+  position: absolute;
+  right: 0;
+  top: .2rem;
+  width: .7rem;
+  height: .7rem;
+  background-position: -1.85rem 0
+}
+
+.rank-hd {
+  position: absolute;
+  left: 50%;
+  top: -.3rem;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 1.89rem;
+  height: .69rem;
+  background-position: 0 -5.25rem
+}
+
+.game-box {
+  margin-top: .3rem;
+  position: relative;
+  width: 6.7rem;
+  height: 6.7rem
+}
+
+.game-box ul {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: .04rem solid #fff;
+  border-top: none;
+  border-right: none;
+  position: relative
+}
+
+.game-box li {
+  width: 2.22rem;
+  height: 2.22rem;
+  border-top: .04rem solid #fff;
+  border-right: .04rem solid #fff;
+  position: absolute
+}
+
+.game-box li:nth-of-type(1) {
+  top: 0;
+  left: 0
+}
+
+.game-box li:nth-of-type(2) {
+  top: 0;
+  left: 2.22rem
+}
+
+.game-box li:nth-of-type(3) {
+  top: 0;
+  left: 4.44rem
+}
+
+.game-box li:nth-of-type(4) {
+  top: 2.22rem;
+  left: 0
+}
+
+.game-box li:nth-of-type(5) {
+  top: 2.22rem;
+  left: 2.22rem
+}
+
+.game-box li:nth-of-type(6) {
+  top: 2.22rem;
+  left: 4.44rem
+}
+
+.game-box li:nth-of-type(7) {
+  top: 4.44rem;
+  left: 0
+}
+
+.game-box li:nth-of-type(8) {
+  top: 4.44rem;
+  left: 2.22rem
+}
+
+.game-box li:nth-of-type(9) {
+  top: 4.44rem;
+  left: 4.44rem
+}
+
+.page1, .page2, .page3, .result {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  min-height: 100%;
+  /*background: url(http://hd.xf.fangdd.com/static/senlingame/img/page-ft.png) no-repeat bottom center;*/
+  background-size: 7.5rem 1.6rem;
+  padding-bottom: 1.5rem
+}
+
+.play-time {
+  margin-top: .4rem;
+  width: 1.9rem;
+  height: .6rem;
+  line-height: .6rem;
+  border-radius: .3rem;
+  /*background: url(http://hd.xf.fangdd.com/static/senlingame/img/time.png) no-repeat;*/
+  background-size: .4rem .4rem;
+  background-position: .2rem .1rem;
+  background-color: #ffca7a;
+  color: #a82d00;
+  font-size: .3rem;
+  /*text-indent: .75rem*/
+  text-align: center;
+}
+
+.pages {
+  padding-top: .15rem;
+  line-height: .6rem;
+  font-size: .3rem;
+  color: #982505
+}
+
+.pages strong {
+  text-shadow: 1px .02rem 0 #982505, 1px -.02rem 0 #982505, -1px -.02rem 0 #982505, -1px .02rem 0 #982505;
+  color: #f9fd5f
+}
+
+.page-ft {
+  position: fixed;
+  left: 0;
+  top: 45%;
+  right: 0;
+  z-index: 9999;
+  text-align: center;
+  color: #fff;
+  line-height: 1rem;
+  background: rgba(0, 0, 0, .8);
+  color: #fff
+}
+
+.result-hd {
+  width: 5.08rem;
+  height: 4.68rem
+}
+
+.result h3 {
+  margin-top: .15rem;
+  text-align: center;
+  color: #982505;
+  line-height: .4rem;
+  font-size: .28rem
+}
+
+.result img.logos {
+  width: 3.48rem;
+  height: 1.02rem
+}
+
+.result .share-btn {
+  margin-top: .8rem;
+  font-weight: 700;
+  font-size: .36rem;
+  width: 4.5rem;
+  height: .9rem;
+  line-height: .9rem;
+  text-align: center;
+  display: inline-block;
+  background: #ff770d;
+  color: #fff;
+  border: .05rem solid #d45000;
+  border-radius: .45rem
+}
+
+.result p {
+  font-size: .28rem;
+  text-align: center;
+  line-height: .9rem;
+  color: #982505
+}
+
+.rank {
+  padding: .5rem 0;
+  text-align: center;
+  min-height: 100%;
+  background: url(http://hd.xf.fangdd.com/static/senlingame/img/rank1.png) top center no-repeat #f7e1bd;
+  background-size: 7.5rem 12.36rem
+}
+
+.rank .rank-mc {
+  width: 3.48rem;
+  height: 2.26rem;
+  display: inline-block;
+  background: url(http://hd.xf.fangdd.com/static/senlingame/img/rank2.png) top center no-repeat;
+  background-size: 100% 100%
+}
+
+.rank .rank-mc p {
+  line-height: 1;
+  padding-top: .75rem;
+  font-size: .22rem;
+  color: #c77b02
+}
+
+.rank .rank-mc p strong {
+  line-height: 1;
+  font-size: .5rem;
+  font-weight: 700;
+  color: #fe4e00;
+  text-shadow: none
+}
+
+.rank p {
+  font-size: .3rem;
+  color: #982505;
+  line-height: .46rem
+}
+
+.rank p strong {
+  text-shadow: 1px .02rem 0 #982505, 1px -.02rem 0 #982505, -1px -.02rem 0 #982505, -1px .02rem 0 #982505;
+  color: #f9fd5f
+}
+
+.rank .rank-warp {
+  position: relative;
+  margin: .6rem .3rem .3rem .3rem;
+  border: .05rem solid #f56200;
+  padding: .1rem;
+  background: #ffdd9e;
+  border-radius: .2rem
+}
+
+.rank .rank-warp div {
+  padding: .3rem 0 .1rem 0;
+  border: 1px solid #f56200;
+  border-radius: .2rem
+}
+
+.rank table {
+  width: 100%
+}
+
+.rank table td, .rank table th {
+  text-align: center;
+  font-size: .36rem;
+  line-height: .8rem
+}
+
+.rank table th {
+  color: #f56200
+}
+
+.rank table td {
+  color: #982505
+}
+
+.rank table i {
+  width: .52rem;
+  height: .52rem;
+  display: inline-block;
+  background: #f56200;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  line-height: .52rem
+}
+
+.btn1, .btn2 {
+  margin-top: .3rem;
+  font-weight: 700;
+  font-size: .36rem;
+  width: 4.5rem;
+  height: .9rem;
+  line-height: .9rem;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  border-radius: .45rem
+}
+
+.btn1 {
+  background: #ff770d;
+  border: .05rem solid #d45000
+}
+
+.btn2 {
+  background: #53b3ee;
+  border: .05rem solid #0082e6
+}
+
+.radio {
+  width: .5rem;
+  height: .5rem;
+  position: absolute;
+  right: .2rem;
+  top: .2rem;
+  z-index: 999
+}
+
+.radio1 {
+  width: .5rem;
+  height: .5rem;
+  background: url(http://hd.xf.fangdd.com/static/senlingame/img/radio.png) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-animation: rotate-all 5s linear 0s infinite;
+  animation: rotate-all 5s linear 0s infinite
+}
+
+.no-radio {
+  width: .5rem;
+  height: .5rem;
+  background: url(http://hd.xf.fangdd.com/static/senlingame/img/radio-close.png) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 0;
+  top: 0
+}
+
+.pop {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  z-index: 200;
+  display: none;
+}
+.game-pop-box {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+/*  background: url(http://hd.xf.fangdd.com/static/senlingame/img/logo1.png) no-repeat .3rem .3rem;*/
+  background-size: 3.46rem 1.06rem;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 10;
+}
+
+.game-start-btn {
+  margin: .3rem 0;
+  width: 3rem;
+  height: .9rem;
+  border-radius: .45rem;
+  border: .03rem solid #fff;
+  color: #fff;
+  display: inline-block;
+  font-size: .46rem;
+  text-align: center;
+  line-height: .9rem;
+}
+.game-reset-btn {
+    margin: .3rem 0;
+    width: 3rem;
+    border-radius: .45rem;
+    color: #fff;
+    display: inline-block;
+    font-size: .46rem;
+    text-align: center;
+    line-height: .9rem;
+    background-color: #c77b02;
+}
+
+.game-reset-btn:disabled {
+    background-color: gainsboro;
+}
+.game-pop-hd {
+  display: none;
+}
+
+.game-pop-hd h2 {
+  font-size: .4rem;
+  color: #f9fd5f;
+}
+
+.game-pop-hd p {
+  font-size: .3rem;
+  color: #fff
+}

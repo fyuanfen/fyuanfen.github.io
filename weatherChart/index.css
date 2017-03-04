@@ -1,0 +1,148 @@
+
+* {
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+fieldset {
+    width: 1200px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+.left {
+    float: left;
+    margin-left: 100px;
+}
+.right {
+    float: left;
+    margin-left: 100px;
+}
+.left span{
+    display: inline-block;
+    width:50px;
+    height:50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    border:1px solid #16324a;
+    font-size: 1.5rem;
+}
+.left input{
+    display: none;
+}
+
+#city-select{
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    width:100px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    padding:0 25px;
+    font-size: 1rem;
+    letter-spacing: 10px;
+
+}
+#aqi-chart-wrap{
+    position: relative;
+    width:1200px;
+    height:600px;
+    margin:50px auto;
+    box-shadow: 0 0 5px #999999;
+    border-radius: 15px;
+    overflow: hidden;
+
+}
+@keyframes heightAnim{
+    0% {
+        bottom:-300px;
+    }
+    100%{
+        bottom:0px;
+    }
+}
+
+
+#aqi-chart-wrap .title {
+    margin:20px 400px;
+    font-size: 20px;
+}
+.aqi-bar{
+    position: absolute;
+    bottom:0;
+    cursor:pointer;
+    animation: heightAnim .5s ease;
+
+}
+
+.selected{
+    background-color: #16324a;
+    color:#fff;
+}
+
+.aqi-hint {
+    position: absolute;
+    display: none;
+    width:100px;
+    height: 40px;
+    border-radius: 5px;
+    border:1px solid #16324a;
+    background-color: #fff;
+    text-align: center;
+    opacity: .7;
+    font-size: .55rem;
+}
+
+.show span{
+    position: absolute;
+    display: block;
+
+}
+
+
+/*label {*/
+    /*position: relative;*/
+    /*display: inline-block;*/
+    /*width: 50px;*/
+    /*height: 50px;*/
+/*}*/
+/*label span {*/
+    /*display: block;*/
+    /*text-align: center;*/
+    /*line-height: 50px;*/
+    /*border: 1px solid #16324a;*/
+    /*border-radius: 50%;*/
+    /*cursor: pointer;*/
+/*}*/
+/*label input {*/
+    /*position: absolute;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*opacity: 0;*/
+/*}*/
+/*.selected {*/
+    /*background-color: #16324a;*/
+    /*color: white;*/
+/*}*/
+/*.aqi-hint {*/
+    /*position: absolute;*/
+    /*display: none;*/
+    /*width: 120px;*/
+    /*border: 1px solid #16324a;*/
+    /*background-color: white;*/
+    /*z-index: 999;*/
+    /*font-size: .75rem;*/
+    /*line-height: 20px;*/
+    /*text-align: center;*/
+    /*border-radius: 5px;*/
+    /*box-shadow: 0px 0px 5px #dddddd;*/
+    /*opacity: .8;*/
+/*}*/
+/*.show + div {*/
+    /*display: block;*/
+/*}*/
+/*.title {*/
+    /*position: absolute;*/
+    /*text-align: center;*/
+    /*width: 100%;*/
+    /*top: 10px;*/
+/*}*/

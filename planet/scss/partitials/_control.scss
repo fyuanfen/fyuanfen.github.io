@@ -1,0 +1,78 @@
+@import "variable";
+
+.control {
+  flex: 7;
+  color: $color4;
+  & .craft-control {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    width: 70px;
+    margin: 40px 40px;
+    cursor: pointer;
+    &:last-child {
+      font-size: 2rem;
+    }
+    & span {
+      display: inline-block;
+      width: 60px;
+      line-height: 60px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: $color5;
+    }
+    &.selected [class *= operate] {
+      display: inline-block;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+  & [class *= operate] {
+    display: none;
+    position: absolute;
+    list-style: none;
+    & button {
+      width: 25px;
+      height: 25px;
+      background-color: $color8;
+      color: $color5;
+      border: none;
+      font-size: .75rem;
+      border-radius: 50%;
+      cursor: pointer;
+      outline: none;
+    }
+    & [class *= forbid] {
+      opacity: .5;
+    }
+  }
+  & .operate-1 {
+    left: 20px;
+    top: -20px;
+  }
+  & .operate-2 {
+    left: 40px;
+    top: 15px;
+  }
+  & .operate-3 {
+    left: 20px;
+    top: 50px;
+  }
+  & .operates {
+    display: inline-block;
+  }
+}
+
+
+.control-wrapper {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 150px;
+  border: 2px dotted $color6;
+  border-radius: 10px;
+}
