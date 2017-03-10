@@ -1,8 +1,9 @@
-# select
+# Selectpick下拉框插件
 模拟select下拉框
 效果图如下所示
 ![select](example/selectpick.png)
-**[DEMO请案例点击这里查看.](http://www.lovewebgames.com/jsmodule/select.html "select demo")**
+
+**[DEMO请案例点击这里查看.](https://fyuanfen.github.io/selectpick/)**
 ----------
 #调用示例
 	<select name="select" id="select">
