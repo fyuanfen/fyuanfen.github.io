@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>select</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link rel="stylesheet" type="text/css" href="../src/select.css">
+	</head>
+	<body>
+	<h1>用jQuery制作Select下拉框插件</h1>
+		<select name="select" id="select">
+			<option value="1">男</option>
+			<option value="2" >女</option>
+			<option value="10" disabled="true">人妖</option>
+		</select>
+		<select id="select2" disabled="true"></select>
+		<input type="text" id="select3"  value="0">
+		<p class="vad">
+			<a href="http://www.zyy1217.com/" target="_blank">zyy1217.com</a>
+			<a href="http://www.dowebok.com/196.html" target="_blank">说 明</a>
+			<a href="http://www.dowebok.com/196.html" target="_blank">下 载</a>
+		</p>
+
+
+		<script type="text/javascript" src="../src/jquery-1.11.2.js"></script>
+		<script type="text/javascript" src="../src/select.js"></script>
+		<script>
+			$('#select').Select({
+			    width:100,
+				height:30
+			});
+		$('#select2').Select({
+			width:200,
+			model: [{
+				text: "请选择",
+				value: "1"
+			}]
+		});
+		var model=[{
+            text: "请选择",
+            value: "0",
+        	disabled:true
+        },{
+				text: "浙江",
+				value: "1"
+			},{
+				text: "杭州",
+				value: "2"
+			},{
+				text: "宁波",
+				value: "3"
+			},{
+				text: "湖北",
+				value: "4"
+			},{
+				text: "上海",
+				value: "5"
+			},{
+				text: "万达",
+				value: "6"
+			},{
+				text: "物美",
+				value: "7",
+				disabled:true
+			},{
+				text: "中国",
+				value: "8"
+			},{
+				text: "外国",
+				value: "9"
+			}];
+		$('#select3').change(function(){
+			console.log('选中个：'+$(this).val())
+		}).Select({
+			width:200,
+			height:30,
+			maxHeight:300,
+			maxWidth:'auto',
+			model: model
+		});
+
+		</script>
+	</body>
+</html>
