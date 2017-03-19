@@ -7,7 +7,9 @@
 
 ### [项目演示地址](chat.zyy1217.com)
 ## 效果图：
-![Image](https://github.com/fyuanfen/fyuanfen.github.io/tree/master/chatRoom/src/assets/chat.gif)
+
+
+![Untitled Image](http://images.zyy1217.com/BDIEP)
 
 
 # 一、需求分析
