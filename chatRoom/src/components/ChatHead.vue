@@ -10,7 +10,7 @@
       <p class="group-name">胡吹乱侃({{onlineCount}})</p>
     </div>
     <div class="-right">
-      <router-link to="/groupinfo" class="iconfont icon-group"></router-link>
+      <a href="https://github.com/fyuanfen" class="iconfont icon-group"></a>
       <!--<i class="iconfont icon-group">-->
       <!--</i>-->
     </div>
