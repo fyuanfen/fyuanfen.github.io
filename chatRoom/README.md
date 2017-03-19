@@ -7,7 +7,7 @@
 
 ### [项目演示地址](chat.zyy1217.com)
 ## 效果图：
-![Untitled Image](http://images.zyy1217.com/nuDkm)
+![Untitled Image](https://github.com/fyuanfen/fyuanfen.github.io/tree/master/chatRoom/src/assets/chat.gif)
 
 
 # 一、需求分析
