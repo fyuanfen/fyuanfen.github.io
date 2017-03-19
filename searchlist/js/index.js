@@ -73,13 +73,27 @@ function fn(data) {
 
     })
     document.getElementsByTagName('div')[0].replaceChild(newUlist, ulList);
-    ulList = null;
+    ulList = null;//gc垃圾回收
 
+    [].forEach.call(newUlist.childNodes,function (item) {
+        EventUtil.addHandler(item, 'mouseenter', function (event) {
+            var target = event.target ||event.srcElement;
+            if (target.tagName.toLowerCase() === 'li') {
 
-    EventUtil.addHandler(newUlist, 'mouseenter', function (event) {
-        var target = event.target ||event.srcElement;
-        resetStyle(target);
-    })
+                resetStyle(target);
+            }
+        });
+        EventUtil.addHandler(item, 'mouseout', function (event) {
+            var target = event.target ||event.srcElement;
+            if (target.tagName.toLowerCase() === 'li') {
+                console.log(target)
+                resetStyle(target);
+                EventUtil.removeClass(item, 'hover');
+            }
+        });
+
+    });
+
 
     EventUtil.addHandler(newUlist, 'click', function (event) {
         var e = event || window.event;
@@ -119,13 +133,10 @@ function showList() {
 }
 
 function resetStyle(target) {
-
     [].forEach.call(target.parentNode.childNodes, function (item) {
         EventUtil.removeClass(item, 'hover');
     });
-
     EventUtil.addClass(target, 'hover');
-
 }
 function onKeydown(e) {
     if (e.keyCode != '38' && e.keyCode != '40') {
@@ -140,9 +151,7 @@ function onKeydown(e) {
                 }
                 else {
                     ulList.dataset.listIndex = parseInt(ulList.dataset.listIndex) - 1;
-
                 }
-                ;
                 break;
             case 40:
                 if (ulList.dataset.listIndex == parseInt(ulList.childNodes.length) - 1) {
