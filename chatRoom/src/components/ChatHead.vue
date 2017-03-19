@@ -10,7 +10,7 @@
       <p class="group-name">胡吹乱侃({{onlineCount}})</p>
     </div>
     <div class="-right">
-      <a href="https://github.com/fyuanfen" class="iconfont icon-group"></a>
+      <a href="https://github.com/fyuanfen/fyuanfen.github.io/tree/master/chatRoom" class="iconfont icon-group"></a>
       <!--<i class="iconfont icon-group">-->
       <!--</i>-->
     </div>
