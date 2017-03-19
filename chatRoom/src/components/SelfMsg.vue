@@ -1,7 +1,6 @@
 <template>
-<div class="other-wrap">
-  <span class="-header" :style="{'background-color':color}">{{name.slice(-1)}}</span>
-  <span class="-name">{{name}}</span>
+<div class="self-wrap">
+  <span class="-header" :style="{'background-color':color}">我</span>
   <div class="-msg">{{msg}}</div>
 </div>
 </template>
@@ -19,15 +18,18 @@ export default {
   mounted () {
     this.$el.scrollIntoView()
   },
-  props: ['msg', 'name', 'color']
+  props: ['msg', 'color']
 }
 </script>
 <style lang='less'>
-.other-wrap{
+.self-wrap{
   /*background-color: #666;*/
-  padding: 5px 5px 0 5px;
+  padding: 5px 5px 15px 5px;
   position: relative;
+  overflow: hidden;
   .-header{
+  	position: relative;
+  	left: ~'calc(100% - 50px)';
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -37,21 +39,21 @@ export default {
     border-radius: 50%;
     font-weight: bolder;
   }
-  .-name{
-    /*background-color: #fff;*/
+ /* .-name{
+    background-color: #fff;
     position: absolute;
     font-size: 14px;
     padding: 2px;
     margin: 0 10px;
-    color: #999;
-  }
+  }*/
   .-msg{
-    /*display: inline-flex;*/
     background-color: #fff;
     padding: 10px;
+
+    float: right;
     position: relative;
-    left: 60px;
-    top: -20px;
+    left: -60px;
+    top: 0px;
     border-radius: 6px;
     max-width: ~'calc(100% - 180px)';
     font-size: 16px;
@@ -60,12 +62,12 @@ export default {
       display: inline-block;
       height: 0;
       width: 0;
-      border-right: solid 10px #fff;
+      border-left: solid 10px #fff;
       border-top: solid 6px transparent;
       border-bottom : solid 6px transparent;
       position: absolute;
       top:5px;
-      left: -8px;
+      left: 100%;
     }
   }
 }

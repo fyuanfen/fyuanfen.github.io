@@ -136,20 +136,20 @@ function onKeydown(e) {
         switch (e.keyCode) {
             case 38:
                 if (ulList.dataset.listIndex == -1) {
-                    ulList.dataset.listIndex = Number(ulList.childNodes.length - 1);
+                    ulList.dataset.listIndex = parseInt(ulList.childNodes.length - 1);
                 }
                 else {
-                    ulList.dataset.listIndex = Number(ulList.dataset.listIndex) - 1;
+                    ulList.dataset.listIndex = parseInt(ulList.dataset.listIndex) - 1;
 
                 }
                 ;
                 break;
             case 40:
-                if (ulList.dataset.listIndex == Number(ulList.childNodes.length) - 1) {
-                    ulList.dataset.listIndex = Number(-1);
+                if (ulList.dataset.listIndex == parseInt(ulList.childNodes.length) - 1) {
+                    ulList.dataset.listIndex = parseInt(-1);
                 }
                 else {
-                    ulList.dataset.listIndex = Number(ulList.dataset.listIndex) + 1;
+                    ulList.dataset.listIndex = parseInt(ulList.dataset.listIndex) + 1;
                 }
                 break;
         }
