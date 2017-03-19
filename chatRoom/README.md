@@ -6,11 +6,8 @@
 采用Vue + Vue-router 视图层双向数据绑定框架，进行组件化开发。并使用ngix实现项目热部署，反向代理单个云主机IP上的多个Virtual Host，实现负载均衡。
 
 ### [项目演示地址](chat.zyy1217.com)
-
 ## 效果图：
-![Untitled Image](http://images.zyy1217.com/K73md)
-
-
+![Untitled Image](http://images.zyy1217.com/nuDkm)
 
 
 # 一、需求分析
