@@ -8,7 +8,8 @@
 #### [源码解析](https://github.com/fyuanfen/fyuanfen.github.io/blob/master/selectpick/%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90.md)
 
 ----------
-#调用示例
+# 调用示例
+```html
 	<select name="select" id="select">
 		<option value="-1">请选择</option>
 		<option value="1">男</option>
@@ -77,26 +78,27 @@
 		sel.setData(model);//动态更改数据源
 	},2000);
 	</script>
-#API
-##属性
-###target：`[DOM|String|$]`
+```
+# API
+## 属性
+### target：`[DOM|String|$]`
 	要改变成select的节点，可以原来就是select，也可以是其他元素，如果是其他元素时，优先取value取为选中项，否则取data-value值；
-###model:`Array`
+### model:`Array`
 	数据源数组[value:'1',text:'文本',disabled:false]，如果无的时候，会去option,disabled可以控制是否可选，option上同
-###multi:`bool`
+### multi:`bool`
 	是否多选，暂缺
-###disabled:`bool`
+### disabled:`bool`
 	是否可用,默认可用false,
 	如果没有这个值会去取target的disabled或target.hasClass('disabled')来判断是否可用
-##方法
-###setData:`function(data)`
+## 方法
+### setData:`function(data)`
 	更改数据源data为数组[value:'1',text:'文本',disabled:false]
-###selected:`function(val,txt)`
+### selected:`function(val,txt)`
 	选中后的回调
-##事件
-###change:`[value]`
+## 事件
+### change:`[value]`
 	选中项改变时触发
-###blur:
+### blur:
 	隐藏时触发
-###set:function(e,val)
+### set:function(e,val)
 	$(target).trigger('set','1')设置选中项
