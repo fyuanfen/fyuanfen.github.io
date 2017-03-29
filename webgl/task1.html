@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>3d小车</title>
+</head>
+
+<body>
+<canvas id="mainCanvas"></canvas>
+<script type="text/javascript" src="../../demo/js/stats.js"></script>
+<script type="text/javascript" src="../../demo/js/three.js"></script>
+<script type="text/javascript" src="../../demo/js/dat.gui.js"></script>
+<script type="text/javascript">
+
+    window.onload = function () {
+        function MyThree() {
+            var mycanvas = document.getElementById("mainCanvas");
+            mycanvas.width = innerWidth;
+            mycanvas.height = innerHeight;
+
+            this.wheels = [];
+            this.body = null;
+            this.plane =null;
+            this.control = initControl();//控制面板
+            this.stats = initStats();
+
+
+
+            this.renderer = new THREE.WebGLRenderer({
+                canvas: mycanvas,
+                antialias: true,
+                precision: "highp"
+            });
+            this.renderer.setClearColor(0x999999); // black
+            this.scene = new THREE.Scene();
+
+
+            this.camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+            this.camera.position.set(30, 20, 40);
+            this.camera.lookAt(new THREE.Vector3(0, 0, 0));
+
+
+            this.scene.add(this.camera);
+            var ambientLight = new THREE.AmbientLight(0x999999);   // 添加环境光
+            this.scene.add(ambientLight);
+            var directionalLight = new THREE.DirectionalLight(0x777777);  // 添加平行光
+            directionalLight.position.set(-50, 10, 40);   // 设置平行光光源位置
+            this.scene.add(directionalLight);
+        }
+
+        function initControl(){
+            //初始化控制面板
+            var control = new function() {
+                this.cameraPX = 30;
+                this.cameraPY = 20;
+                this.cameraPZ = 40;
+
+            };
+            var gui = new dat.GUI();
+            gui.add(control, 'cameraPX', -200, 200);
+            gui.add(control, 'cameraPY', -200, 200);
+            gui.add(control, 'cameraPZ', -200, 200);
+
+            return control;
+
+
+        }
+
+        function initStats(){  //初始化函数，定义具体位置
+            var stats = new Stats();
+            stats.setMode(0);//0为fps，1为ms
+            stats.domElement.style.position = 'absolute';
+            stats.domElement.style.left = '20px';
+            stats.domElement.style.top = '20px';
+            document.getElementsByTagName('body')[0].appendChild(stats.domElement);
+            return stats;
+        }
+
+        MyThree.prototype.init = function () {
+            //创建一个坐标轴
+            var axex = new THREE.AxisHelper(20);
+
+            this.body = this.carBody(0, 0, 0);
+            this.plane = this.createPlane();
+            this.wheels.push(this.carWheel(-8, -4.5, 9));
+            this.wheels.push(this.carWheel(-8, -4.5, -7));
+            this.wheels.push(this.carWheel( 8, -4.5, 9));
+            this.wheels.push(this.carWheel( 8, -4.5, -7));
+            this.wheels.forEach(item=>this.scene.add(item));
+            this.scene.add(this.body);
+            this.scene.add(this.plane);
+            this.scene.add(axex);
+
+            this.render();
+        };
+        MyThree.prototype.material = function () {
+            return new THREE.MeshPhongMaterial({color: 0xdddddd});
+        };
+        MyThree.prototype.carBody = function (x, y, z) {
+            var _this = this,
+                body = new THREE.Mesh(new THREE.CubeGeometry(15, 10, 30), _this.material());
+            body.position.x = x;
+            body.position.y = y;
+            body.position.z = z;
+            body.castShadow = true; //投射阴影
+            return body;
+        };
+        MyThree.prototype.carWheel = function (x, y, z) {
+            var _this = this,
+                wheel = new THREE.Mesh(new THREE.TorusGeometry(3, 1.5, 50, 50), _this.material());
+            wheel.rotation.y = 30;
+            wheel.position.x = x;
+            wheel.position.y = y;
+            wheel.position.z = z;
+            return wheel;
+        };
+        MyThree.prototype.createPlane = function () {
+            //创建一个平面
+            var planeGeometry = new THREE.PlaneGeometry(40,40,1,1);
+            var planeMeterial = new THREE.MeshLambertMaterial({color:0xcccccc});
+            var plane = new THREE.Mesh(planeGeometry,planeMeterial);
+
+            //定义平面的位置
+            plane.rotation.x = -0.5*Math.PI;
+            plane.position.x = 0;
+            plane.position.y = -7;
+            plane.position.z = 0;
+            plane.receiveShadow = true;//接受阴影
+            return plane;
+
+        };
+        MyThree.prototype.render = function () {
+                this.stats.update(); //实时更新
+
+                this.camera.position.x = this.control.cameraPX;
+                this.camera.position.y = this.control.cameraPY;
+                this.camera.position.z = this.control.cameraPZ;
+                this.camera.lookAt(new THREE.Vector3(0, 0, 0));
+                requestAnimationFrame(this.render.bind(this));//使用bind绑定当前this值
+
+                this.renderer.render(this.scene, this.camera);
+        };
+
+        var myThree = new MyThree();
+        myThree.init();
+    };
+</script>
+</body>
+</html>
