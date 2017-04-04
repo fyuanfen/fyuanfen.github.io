@@ -35,12 +35,13 @@
 ***
 ### 登录页面
 
-![](http://images.zyy1217.com/1.gif)
+![](http://images.zyy1217.com/chat1.gif)
 
 
 
 ### 多人聊天，进入推出消息提示，按钮特效
-![](http://images.zyy1217.com/2.gif)
+![](http://images.zyy1217.com/chat2.gif)
+
 
 
 
