@@ -1,10 +1,10 @@
 # 2017
 ### [图片懒加载](https://github.com/fyuanfen/vue-Lazyload)
-### [vue-gank移动端网页版](http://project.zyy1217.com/gank/)
+### [vue-gank移动端网页版](https://github.com/fyuanfen/vue-gank)
 ### [Three.js 3d小车模型](https://fyuanfen.github.io/webgl/3dcar)
-### [Vue+Socket.io在线聊天室](http://project.zyy1217.com/chat/)
+### [Vue+Socket.io在线聊天室](https://github.com/fyuanfen/fyuanfen.github.io/tree/master/chatRoom)
 ### [Selectpick下拉框插件](https://github.com/fyuanfen/Selectpick)
-### [仿百度实时下拉搜索列表](http://project.zyy1217.com/searchlist/)
+### [仿百度实时下拉搜索列表](https://github.com/fyuanfen/fyuanfen.github.io/tree/master/searchlist)
 ### [Vue+Spring+Mysql实现可以增删改查的表格](https://github.com/fyuanfen/CURDTable)
 # 2016
 ### [HTML5拼图小游戏（Canvas)](https://fyuanfen.github.io/html5-puzzle)                                                 
