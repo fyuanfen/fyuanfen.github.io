@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .parallax{
+            -webkit-perspective: 300px;
+            perspective: 300px;
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            font-size: 200%;
+        }
+
+        .debug-on .parallax__group {
+            -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
+            transform: translate3d(700px, 0, -800px) rotateY(30deg);
+        }
+        .debug-on .parallax__layer {
+            box-shadow: 0 0 0 2px #000;
+            opacity: 0.9;
+        }
+        .parallax__group {
+            -webkit-transition: -webkit-transform 0.5s;
+            transition: transform 0.5s;
+        }
+        .parallax__group {
+            position: relative;
+            height: 100vh;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+
+        .parallax__layer--base {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            /*z-index: 4;*/
+        }
+        .parallax__layer--back {
+            -webkit-transform: translateZ(-300px) scale(2);
+            transform: translateZ(-300px) scale(2);
+            /*z-index: 3;*/
+        }
+        .parallax__layer--fore {
+            -webkit-transform: translateZ(90px) scale(.7);
+            transform: translateZ(90px) scale(.7);
+            /*z-index: 1;*/
+        }
+
+        .parallax__layer--deep {
+            -webkit-transform: translateZ(-600px) scale(3);
+            transform: translateZ(-600px) scale(3);
+            z-index: 2;
+        }
+        .parallax__layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .title {
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        #group1 .parallax__layer--base {
+            background: rgb(102,204,102);
+        }
+        #group2 .parallax__layer--back {
+            background: rgb(123,210,102);
+        }
+        #group3 .parallax__layer--base {
+            background: rgb(153,216,101);
+        }
+        #group4 .parallax__layer--deep {
+            background: rgb(184,223,101);
+        }
+        #group5 .parallax__layer--base {
+            background: rgb(214,229,100);
+        }
+        #group6 .parallax__layer--back {
+            background: rgb(245,235,100);
+        }
+        #group7 .parallax__layer--base {
+            background: rgb(255,241,100);
+        }
+        #group1 {
+            z-index: 5;
+        }
+        #group2 {
+            z-index: 3;
+        }
+        #group3 {
+            z-index: 4;
+        }
+        #group4 {
+            z-index: 2;
+        }
+        #group5 {
+            z-index: 3;
+        }
+        #group6 {
+            z-index: 2;
+        }
+        #group7 {
+            z-index: 3;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="debug">
+    <label><input type="checkbox"> Debug</label>
+</div>
+
+<div class="parallax">
+    <div id="group1" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+            <div class="title">GROUP1 Base Layer</div>
+        </div>
+    </div>
+    <div id="group2" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+            <div class="title">GROUP2 Base Layer</div>
+        </div>
+        <div class="parallax__layer parallax__layer--back">
+            <div class="title">GROUP2 Background Layer</div>
+        </div>
+    </div>
+    <div id="group3" class="parallax__group">
+        <div class="parallax__layer parallax__layer--fore">
+            <div class="title">GROUP3 Foreground Layer</div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+            <div class="title">GROUP3 Base Layer</div>
+        </div>
+    </div>
+    <div id="group4" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+            <div class="title">GROUP4 Base Layer</div>
+        </div>
+        <div class="parallax__layer parallax__layer--back">
+            <div class="title">GROUP4 Background Layer</div>
+        </div>
+        <div class="parallax__layer parallax__layer--deep">
+            <div class="title">GROUP4 Deep Background Layer</div>
+        </div>
+    </div>
+    <div id="group5" class="parallax__group">
+        <div class="parallax__layer parallax__layer--fore">
+            <div class="title">GROUP5 Foreground Layer</div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+            <div class="title">GROUP5 Base Layer</div>
+        </div>
+    </div>
+    <div id="group6" class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+            <div class="title">GROUP6 Background Layer</div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+            <div class="title">GROUP6 Base Layer</div>
+        </div>
+    </div>
+    <div id="group7" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+            <div class="title">GROUP7 Base Layer</div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script>
+
+    var debugInput = document.querySelector("input");
+    function updateDebugState() {
+        document.body.classList.toggle('debug-on', debugInput.checked);
+    }
+    debugInput.addEventListener("click", updateDebugState);
+    updateDebugState();
+</script>
+
+</html>

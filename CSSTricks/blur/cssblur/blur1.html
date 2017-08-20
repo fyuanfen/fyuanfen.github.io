@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+        body{
+            margin:0;
+            padding:0;
+        }
+        .content {
+            color: #ffffff;
+            font-size: 40px;
+        }
+        .bg {
+
+            background: url('../asset/1.jpg');
+            height:1000px;
+            text-align: center;
+            line-height: 1;
+
+        }
+        .bg-blur {
+            float: left;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            filter: url(blur.svg#blur);  /* FireFox, Chrome, Opera */
+            -webkit-filter: blur(10px); /* Chrome, Opera */
+            -moz-filter: blur(10px);
+            -ms-filter: blur(10px);
+            filter: blur(10px);
+            filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */
+        }
+        .content-front {
+            position:absolute;
+            left: 10px;
+            right: 10px;
+            height:600px;
+            line-height: 600px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="bg">
+    <div class="bg bg-blur"></div>
+    <div class="content content-front">我是内容</div>
+</div>
+</div>
+</body>
+</html>
+

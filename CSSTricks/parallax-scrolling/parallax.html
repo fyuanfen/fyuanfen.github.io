@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .parallax {
+            perspective: 1px;
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            font-size: 200%;
+
+        }
+
+        .parallax__layer {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 100vh 0;
+        }
+        .parallax__layer--base {
+            transform: translateZ(0);
+        }
+        .parallax__layer--back {
+            transform: translateZ(-1px) scale(2);
+        }
+        .title {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="parallax">
+    <div class="parallax__layer parallax__layer--back">
+        <div class="title">This is the background</div>
+    </div>
+    <div class="parallax__layer parallax__layer--base">
+        <div class="title">This is the foreground</div>
+    </div>
+</div>
+
+
+</body>
+</html>
